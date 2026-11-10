@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { db, type DbTopic } from '../lib/db';
 import { type ScreenType } from '../components/Navbar';
+import { MathView } from '../components/MathView';
 
 interface CurriculumScreenProps {
   onNavigate: (screen: ScreenType) => void;
@@ -208,7 +209,7 @@ export const CurriculumScreen: React.FC<CurriculumScreenProps> = ({
                       </span>
                     ) : (
                       <span className="text-[11px] text-slate-400">
-                        অশুরু
+                        শুরু হয়নি
                       </span>
                     )}
                   </div>
@@ -223,9 +224,9 @@ export const CurriculumScreen: React.FC<CurriculumScreenProps> = ({
                 </p>
 
                 {/* Core Idea snippet */}
-                <p className="text-xs text-slate-600 dark:text-slate-300 line-clamp-2 mb-3">
-                  {topic.concept_summary.core_idea}
-                </p>
+                <div className="text-xs text-slate-600 dark:text-slate-300 line-clamp-2 mb-3">
+                  <MathView content={topic.concept_summary.core_idea} inline />
+                </div>
 
                 {/* Prerequisites If Any */}
                 {prereqNames.length > 0 && (

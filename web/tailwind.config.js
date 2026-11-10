@@ -23,7 +23,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        bengali: ['"Hind Siliguri"', 'SolaimanLipi', 'Kalpurush', 'system-ui', 'sans-serif'],
+        bengali: ['"Hind Siliguri"', '"Nirmala UI"', 'Kalpurush', 'SolaimanLipi', 'Vrinda', 'system-ui', 'sans-serif'],
       },
     },
   },

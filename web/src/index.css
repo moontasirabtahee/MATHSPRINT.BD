@@ -13,29 +13,21 @@
   display: none !important;
 }
 
-/* Ensure all Bengali characters inside KaTeX use high quality Bengali fonts with full OpenType ligatures */
-.katex,
+/* Ensure all Bengali characters inside KaTeX use high quality Bengali fonts with full OpenType ligatures and upright style */
 .katex .text,
 .katex .brahmic_fallback,
 .katex .mord.text,
-.katex span.mord {
-  font-family: 'Hind Siliguri', SolaimanLipi, Kalpurush, system-ui, -apple-system, sans-serif;
+.katex .mord.brahmic_fallback,
+.katex span.brahmic_fallback,
+.katex span.text,
+.katex .mtight .brahmic_fallback,
+.katex .mtight .text {
+  font-family: 'Hind Siliguri', 'Nirmala UI', 'Kalpurush', 'SolaimanLipi', 'Vrinda', system-ui, sans-serif !important;
   letter-spacing: normal !important;
   word-spacing: normal !important;
-}
-
-/* Retain specialized KaTeX math fonts strictly for math symbols, numbers, and operators */
-.katex .mord.mathnormal,
-.katex .mbin,
-.katex .mrel,
-.katex .mopen,
-.katex .mclose,
-.katex .mpunct,
-.katex .minner,
-.katex .mfrac .frac-line,
-.katex .sqrt,
-.katex svg {
-  font-family: KaTeX_Math, KaTeX_Main, KaTeX_Size1, KaTeX_Size2, KaTeX_Size3, KaTeX_Size4, KaTeX_AMS, sans-serif !important;
+  font-style: normal !important;
+  text-rendering: optimizeLegibility !important;
+  font-feature-settings: "locl" 1, "nukt" 1, "akhn" 1, "rphf" 1, "rkrf" 1, "blwf" 1, "half" 1, "pstf" 1, "vatu" 1, "cjct" 1 !important;
 }
 
 /* Custom styles for rendered math */
@@ -49,43 +41,35 @@
 }
 
 .math-rendered .katex-display {
-  margin: 0.6em 0;
+  margin: 0.5em 0;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.2em 0;
   scrollbar-width: thin;
+  scrollbar-color: rgba(16, 185, 129, 0.3) transparent;
 }
 
 .math-rendered .katex-html {
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: visible;
   max-width: 100%;
 }
 
 /* Sleek subtle scrollbar for wide equations (prevents thick grey Windows scrollbars) */
-.math-rendered ::-webkit-scrollbar,
-.katex-display::-webkit-scrollbar,
-.katex-html::-webkit-scrollbar {
-  height: 4px;
+.math-rendered .katex-display::-webkit-scrollbar {
+  height: 3px;
 }
 
-.math-rendered ::-webkit-scrollbar-track,
-.katex-display::-webkit-scrollbar-track,
-.katex-html::-webkit-scrollbar-track {
+.math-rendered .katex-display::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.math-rendered ::-webkit-scrollbar-thumb,
-.katex-display::-webkit-scrollbar-thumb,
-.katex-html::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.35);
-  border-radius: 4px;
+.math-rendered .katex-display::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 9999px;
 }
 
-.math-rendered ::-webkit-scrollbar-thumb:hover,
-.katex-display::-webkit-scrollbar-thumb:hover,
-.katex-html::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.65);
+.math-rendered .katex-display::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
 }
 
 /* Hide scrollbar for clean UI tabs */

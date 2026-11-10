@@ -13,6 +13,7 @@ import {
   Bookmark,
 } from 'lucide-react';
 import { db, type DbTopic, type DbQuestion } from '../lib/db';
+import { MathView } from '../components/MathView';
 import { type ScreenType } from '../components/Navbar';
 
 interface DashboardScreenProps {
@@ -314,9 +315,9 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white">
                     {recommendedTopic.title_bn}
                   </h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">
-                    {recommendedTopic.concept_summary.core_idea}
-                  </p>
+                  <div className="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">
+                    <MathView content={recommendedTopic.concept_summary.core_idea} inline />
+                  </div>
                 </div>
 
                 <div className="flex items-center space-x-2 shrink-0">
@@ -332,9 +333,9 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
               {/* Common Trap Warning */}
               <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 flex items-start space-x-2 text-xs text-amber-800 dark:text-amber-300 bg-amber-50/60 dark:bg-amber-950/20 p-2.5 rounded-lg">
                 <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                <span>
-                  <strong>সতর্কতা ও ফাঁদ: </strong>
-                  {recommendedTopic.concept_summary.common_traps}
+                <span className="leading-relaxed">
+                  <strong className="mr-1">সতর্কতা ও ফাঁদ:</strong>
+                  <MathView content={recommendedTopic.concept_summary.common_traps} inline />
                 </span>
               </div>
             </div>
@@ -397,9 +398,9 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
                 <span className="text-[10px] font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400">
                   {recentMistakeQ.topic_name}
                 </span>
-                <p className="text-xs text-slate-800 dark:text-slate-200 font-medium line-clamp-2 mt-1">
-                  {recentMistakeQ.stem}
-                </p>
+                <div className="text-xs text-slate-800 dark:text-slate-200 font-medium line-clamp-2 mt-1">
+                  <MathView content={recentMistakeQ.stem} inline />
+                </div>
                 <button
                   onClick={() => onNavigate('mistakes')}
                   className="mt-3 w-full py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-semibold text-xs shadow-sm transition"

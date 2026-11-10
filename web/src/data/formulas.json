@@ -57,7 +57,7 @@
     "topic_name": "সংখ্যা ও সংখ্যা পদ্ধতি",
     "category": "Arithmetic",
     "title": "বিভাজ্যতার সার্বিক নিয়মাবলি (Divisibility Rules)",
-    "formula": "$$\\begin{aligned} \\text{৩ ও ৯:} & \\text{ অঙ্কের যোগফল}, & \\text{৪:} & \\text{ শেষ ২ অঙ্ক} \\\\ \\text{৮:} & \\text{ শেষ ৩ অঙ্ক}, & \\text{১১:} & \\text{ বিজোড় ও জোড় স্থানের বিয়োগফল} \\end{aligned}$$",
+    "formula": "$$\\begin{aligned} \\text{৩ ও ৯ দ্বারা:} & \\quad \\sum \\text{অঙ্কত্রয়/সমষ্টি বিভাজ্য} \\\\[3pt] \\text{৪ ও ৮ দ্বারা:} & \\quad \\text{শেষ ২ বা ৩ অঙ্ক বিভাজ্য} \\\\[3pt] \\text{১১ দ্বারা:} & \\quad |\\sum \\text{বিজোড় স্থান} - \\sum \\text{জোড় স্থান}| \\in \\{0, 11\\} \\end{aligned}$$",
     "concept_type": "shortcut",
     "explanation": "শেষ অঙ্ক জোড় হলে ২ দ্বারা; শেষ ২ অঙ্ক ৪ দ্বারা এবং শেষ ৩ অঙ্ক ৮ দ্বারা বিভাজ্য হলে মূল সংখ্যাটি যথাক্রমে ৪ ও ৮ দ্বারা বিভাজ্য। অঙ্কগুলোর সমষ্টি ৩ বা ৯ দ্বারা বিভাজ্য হলে সংখ্যাটি ৩ বা ৯ দ্বারা বিভাজ্য। বিজোড় ও জোড় স্থানীয় অঙ্কের সমষ্টির পার্থক্য ০ বা ১১ দ্বারা বিভাজ্য হলে সংখ্যাটি ১১ দ্বারা বিভাজ্য।",
     "rules": [
@@ -175,7 +175,7 @@
     "topic_name": "ল.সা.গু ও গ.সা.গু",
     "category": "Arithmetic",
     "title": "ভগ্নাংশের ল.সা.গু ও গ.সা.গু নির্ণয়ের সূত্র",
-    "formula": "$$\\text{ভগ্নাংশের ল.সা.গু} = \\frac{\\text{লবগুলোর ল.সা.গু}}{\\text{হরগুলোর গ.সা.গু}}, \\quad \\text{গ.সা.গু} = \\frac{\\text{লবগুলোর গ.সা.গু}}{\\text{হরগুলোর ল.সা.গু}}$$",
+    "formula": "$$\\begin{aligned} \\text{ভগ্নাংশের ল.সা.গু} &= \\frac{\\text{লবগুলোর ল.সা.গু}}{\\text{হরগুলোর গ.সা.গু}} \\\\[6pt] \\text{ভগ্নাংশের গ.সা.গু} &= \\frac{\\text{লবগুলোর গ.সা.গু}}{\\text{হরগুলোর ল.সা.গু}} \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "ভগ্নাংশের ক্ষেত্রে যা নির্ণয় করতে বলবে, লবগুলোর তা নির্ণয় করতে হবে এবং হরগুলোর তার বিপরীতটি নির্ণয় করতে হবে। অর্থাৎ লসাগু চাইলে লবগুলোর লসাগু/হরগুলোর গসাগু।",
     "rules": [
@@ -224,7 +224,7 @@
     "topic_name": "ভগ্নাংশ ও দশমিক",
     "category": "Arithmetic",
     "title": "ভগ্নাংশের আকার তুলনা করার ক্রস-গুণন শর্টকাট (Cross Multiplication)",
-    "formula": "$$\\frac{a}{b} \\text{ বনাম } \\frac{c}{d} \\implies a \\cdot d \\text{ বনাম } b \\cdot c \\quad (ad > bc \\implies \\frac{a}{b} > \\frac{c}{d})$$",
+    "formula": "$$\\begin{aligned} \\frac{a}{b} \\text{ বনাম } \\frac{c}{d} &\\implies a \\cdot d \\text{ বনাম } b \\cdot c \\\\[4pt] ad > bc &\\implies \\frac{a}{b} > \\frac{c}{d} \\end{aligned}$$",
     "concept_type": "shortcut",
     "explanation": "লব ও হর ভাগ করে দশমিকে নেওয়ার কোনো প্রয়োজন নেই। ১ম ভগ্নাংশের লব $\\times$ ২য় ভগ্নাংশের হর এবং ২য় ভগ্নাংশের লব $\\times$ ১ম ভগ্নাংশের হর গুণ করুন। যার লবের গুণফল বড় হবে, সেই ভগ্নাংশটিই বৃহত্তম।",
     "rules": [
@@ -355,7 +355,7 @@
     "topic_name": "ট্রেন ও আপেক্ষিক গতি",
     "category": "Arithmetic",
     "title": "গতিবেগের একক রূপান্তরের সার্বিক সূত্র",
-    "formula": "$$\\text{কিমি/ঘণ্টা} \\times \\frac{5}{18} = \\text{মিটার/সেকেন্ড}, \\quad \\text{মিটার/সেকেন্ড} \\times \\frac{18}{5} = \\text{কিমি/ঘণ্টা}$$",
+    "formula": "$$\\begin{aligned} 1 \\text{ কিমি/ঘণ্টা} &= \\frac{5}{18} \\text{ মিটার/সেকেন্ড} \\\\[5pt] 1 \\text{ মিটার/সেকেন্ড} &= \\frac{18}{5} \\text{ কিমি/ঘণ্টা} \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "যেহেতু ১ কিমি = ১০০০ মিটার এবং ১ ঘণ্টা = ৩৬০০ সেকেন্ড, তাই $\\frac{১০০০}{৩৬০০} = \\frac{৫}{১৮}$। গতিবেগ কিমি/ঘণ্টা থেকে মিটার/সেকেন্ডে নিতে $\\frac{৫}{১৮}$ দিয়ে গুণ করতে হবে।",
     "rules": [
@@ -585,7 +585,7 @@
     "topic_name": "নল ও চৌবাচ্চা",
     "category": "Arithmetic",
     "title": "ছিদ্রযুক্ত চৌবাচ্চার পানি নিষ্কাশনের হিসাব",
-    "formula": "$$\\text{ছিদ্র দ্বারা খালি হওয়ার সময়} = \\frac{\\text{স্বাভাবিক সময়} \\times \\text{বিলম্বিত সময়}}{\\text{বিলম্বিত সময়} - \\text{স্বাভাবিক সময়}}$$",
+    "formula": "$$\\text{খালি হওয়ার সময়} = \\frac{T_{\\text{স্বাভাবিক}} \\times T_{\\text{বিলম্বিত}}}{T_{\\text{বিলম্বিত}} - T_{\\text{স্বাভাবিক}}}$$",
     "concept_type": "shortcut",
     "explanation": "তলায় ছিদ্র থাকায় চৌবাচ্চা পূর্ণ হতে স্বাভাবিকের চেয়ে কিছু সময় বেশি লাগে। এই সূত্রে এক লাইনে ছিদ্রের একক খালি করার ক্ষমতা বের হয়।",
     "rules": [
@@ -649,7 +649,7 @@
     "topic_name": "সময় ও কাজের হিসাব",
     "category": "Arithmetic",
     "title": "তুলনামূলক কর্মক্ষমতার শর্টকাট (A, B এর চেয়ে x গুণ দক্ষ)",
-    "formula": "$$\\text{A যদি B-এর } k \\text{ গুণ দক্ষ হয়: } T_A = \\frac{T_{\\text{একত্রে}} \\times (k + 1)}{k}, \\quad T_B = T_{\\text{একত্রে}} \\times (k + 1)$$",
+    "formula": "$$\\begin{aligned} T_A &= \\frac{T_{\\text{একত্রে}} \\times (k + 1)}{k} \\\\[5pt] T_B &= T_{\\text{একত্রে}} \\times (k + 1) \\end{aligned}$$",
     "concept_type": "shortcut",
     "explanation": "দক্ষতার অনুপাত জানা থাকলে একজনের সময়ের সাথে অন্যজনের সময়ের সরাসরি সম্পর্ক স্থাপন করা যায়।",
     "rules": [
@@ -681,7 +681,7 @@
     "topic_name": "গড় ও সমষ্টি",
     "category": "Arithmetic",
     "title": "গড় ও মোট সমষ্টির মৌলিক সম্পর্ক",
-    "formula": "$$\\text{গড়} = \\frac{\\text{রাশিগুলোর মোট সমষ্টি}}{\\text{রাশির সংখ্যা}} \\implies \\text{মোট সমষ্টি} = \\text{গড়} \\times \\text{রাশির সংখ্যা}$$",
+    "formula": "$$\\begin{aligned} \\text{গড়} &= \\frac{\\text{রাশিগুলোর মোট সমষ্টি}}{\\text{রাশির সংখ্যা}} \\\\[5pt] \\text{মোট সমষ্টি} &= \\text{গড়} \\times \\text{রাশির সংখ্যা} \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "পাটিগণিতে গড়ের ভিত্তি হলো সমবণ্টন। রাশির সংখ্যা দিয়ে গড়কে গুণ করলে মোট সমষ্টি পাওয়া যায়। যেকোনো পরিবর্তন সমষ্টির মাধ্যমে হিসাব করলে ভুল হয় না।",
     "rules": [
@@ -779,7 +779,7 @@
     "topic_name": "শতকরা হিসাব",
     "category": "Arithmetic",
     "title": "শতকরা ও ভগ্নাংশের দ্রুত রূপান্তর মেমরি চার্ট",
-    "formula": "$$\\frac{1}{2}=50\\%, \\; \\frac{1}{3}=33.33\\%, \\; \\frac{1}{4}=25\\%, \\; \\frac{1}{5}=20\\%, \\; \\frac{1}{6}=16.67\\%, \\; \\frac{1}{8}=12.5\\%$$",
+    "formula": "$$\\begin{aligned} \\frac{1}{2} = 50\\%, \\quad \\frac{1}{3} = 33.33\\%, \\quad \\frac{1}{4} = 25\\% \\\\[4pt] \\frac{1}{5} = 20\\%, \\quad \\frac{1}{6} = 16.67\\%, \\quad \\frac{1}{8} = 12.5\\% \\end{aligned}$$",
     "concept_type": "concept",
     "explanation": "ব্যাংক ও বিসিএস পরীক্ষায় দ্রুত ক্যালকুলেশন করতে ভগ্নাংশের মান শতকরায় মুখস্থ থাকলে সময় বাঁচে। যেমন: কোনো সংখ্যার ১২.৫% মানে সরাসরি $\\frac{১}{৮}$ দিয়ে ভাগ।",
     "rules": [
@@ -844,7 +844,7 @@
     "topic_name": "লাভ ও ক্ষতি",
     "category": "Commercial Math",
     "title": "ক্রয়মূল্য ও ধার্যমূল্যের (Cost Price vs Marked Price) সম্পর্ক",
-    "formula": "$$\\text{ক্রয়মূল্য} = \\frac{\\text{বিক্রয়মূল্য} \\times 100}{100 + \\text{লাভ}\\%} = \\frac{\\text{বিক্রয়মূল্য} \\times 100}{100 - \\text{ক্ষতি}\\%}$$",
+    "formula": "$$\\begin{aligned} \\text{লাভের ক্ষেত্রে: } \\text{ক্রয়মূল্য} &= \\frac{\\text{বিক্রয়মূল্য} \\times 100}{100 + \\text{লাভ}\\%} \\\\[5pt] \\text{ক্ষতির ক্ষেত্রে: } \\text{ক্রয়মূল্য} &= \\frac{\\text{বিক্রয়মূল্য} \\times 100}{100 - \\text{ক্ষতি}\\%} \\end{aligned}$$",
     "concept_type": "concept",
     "explanation": "লাভ বা ক্ষতি সর্বদা ক্রয়মূল্যের (Cost Price) ওপর হিসাব করা হয়, আর কমিশন বা ছাড় (Discount) সর্বদা লিখিত বা ধার্যমূল্যের (Marked Price) ওপর হিসাব করা হয়।",
     "rules": [
@@ -860,7 +860,7 @@
     "topic_name": "লাভ ও ক্ষতি",
     "category": "Commercial Math",
     "title": "বিক্রয়মূল্যের ওপর লাভ ধার্যের পরীক্ষার ফাঁদ",
-    "formula": "$$\\text{প্রকৃত লাভ\\% (ক্রয়মূল্যের ওপর)} = \\frac{\\text{বিক্রয়মূল্যের ওপর লাভ\\%}}{100 - \\text{বিক্রয়মূল্যের ওপর লাভ\\%}} \\times 100$$",
+    "formula": "$$\\text{প্রকৃত লাভ\\% (ক্রয়মূল্যে)} = \\frac{\\text{বিক্রয়মূল্যের ওপর লাভ\\%}}{100 - \\text{বিক্রয়মূল্যের ওপর লাভ\\%}} \\times 100$$",
     "concept_type": "trap",
     "explanation": "প্রশ্নে বলা থাকে 'বিক্রয়মূল্যের ওপর ২০% লাভ হলে প্রকৃত লাভ কত?' পরীক্ষার্থী ভুলবশত ২০% উত্তর দেয়। বিক্রয়মূল্য ১০০ হলে লাভ ২০, অর্থাৎ ক্রয়মূল্য ৮০ টাকা।",
     "rules": [
@@ -1543,7 +1543,7 @@
     "topic_name": "সরল সমীকরণ ও গঠন",
     "category": "Algebra",
     "title": "সমীকরণ জোটের সমাধানযোগ্যতার শর্ত (Consistency Conditions)",
-    "formula": "$$\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2} \\implies \\text{অনন্য সমাধান}; \\quad \\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2} \\implies \\text{কোনো সমাধান নেই}$$",
+    "formula": "$$\\begin{aligned} \\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2} &\\implies \\text{একটি অনন্য সমাধান} \\\\[4pt] \\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2} &\\implies \\text{কোনো সমাধান নেই} \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "যদি সহগের অনুপাত সমান হয় কিন্তু ধ্রুবকের অনুপাত ভিন্ন হয়, তবে রেখাদ্বয় সমান্তরাল এবং কোনো সাধারণ সমাধান থাকে না। আর তিনটিই সমান হলে অসংখ্য সমাধান থাকে।",
     "rules": [
@@ -1705,7 +1705,7 @@
     "topic_name": "সমাবেশ (Combination)",
     "category": "Higher Math",
     "title": "কমিটি গঠনে 'কমপক্ষে' (At least) শর্তের পরীক্ষার ফাঁদ",
-    "formula": "$$\\text{কমপক্ষে ২ জন মহিলা} = (২ \\text{ জন মহিলা}) + (৩ \\text{ জন মহিলা}) + \\dots$$",
+    "formula": "$$\\text{কমপক্ষে ২ জন মহিলা} = (\\text{২ জন}) + (\\text{৩ জন}) + \\dots$$",
     "concept_type": "trap",
     "explanation": "প্রশ্নে 'কমপক্ষে ২ জন মহিলা নিয়ে ৫ জনের কমিটি' বললে কেবল ২ জন মহিলা নিয়ে হিসাব করলে উত্তর অসম্পূর্ণ থাকবে। সম্ভাব্য সব বৈধ কেস (Case 1, Case 2) পৃথকভাবে বের করে যোগ করতে হবে।",
     "rules": [
@@ -1913,7 +1913,7 @@
     "topic_name": "রেখা, কোণ ও বহুভুজ",
     "category": "Geometry",
     "title": "$n$-ভুজ বহুভুজের অন্তঃকোণ ও কর্ণ সংখ্যার সূত্র",
-    "formula": "$$\\text{অন্তঃকোণসমূহের সমষ্টি} = (2n - 4) \\times 90^\\circ = (n - 2) \\times 180^\\circ, \\quad \\text{কর্ণ সংখ্যা} = \\frac{n(n - 3)}{2}$$",
+    "formula": "$$\\begin{aligned} \\text{অন্তঃকোণ সমষ্টি} &= (n - 2) \\times 180^\\circ \\\\[4pt] \\text{কর্ণ সংখ্যা} &= \\frac{n(n - 3)}{2} \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "যেখানে $n$ হলো বহুভুজের বাহুর সংখ্যা। যেকোনো সুষম বহুভুজের প্রতিটি বহিঃকোণ = $\\frac{360^\\circ}{n}$ এবং বহিঃকোণসমূহের সমষ্টি সর্বদা $360^\\circ$।",
     "rules": [
@@ -1929,7 +1929,7 @@
     "topic_name": "রেখা, কোণ ও বহুভুজ",
     "category": "Geometry",
     "title": "সমান্তরাল রেখা ও ছেদকের কোণ সম্পর্ক",
-    "formula": "$$\\text{একান্তর কোণদ্বয় পরস্পর সমান}, \\quad \\text{অনুরূপ কোণদ্বয় পরস্পর সমান}, \\quad \\text{ছেদকের একই পাশের অন্তঃকোণদ্বয়ের সমষ্টি } = 180^\\circ$$",
+    "formula": "$$\\begin{aligned} \\angle \\text{একান্তর কোণদ্বয়} &= \\text{পরস্পর সমান} \\\\[3pt] \\angle \\text{অনুরূপ কোণদ্বয়} &= \\text{পরস্পর সমান} \\\\[3pt] \\angle \\text{ছেদকের অন্তঃকোণ সমষ্টি} &= 180^\\circ \\end{aligned}$$",
     "concept_type": "concept",
     "explanation": "দুটি সমান্তরাল রেখাকে একটি সরলরেখা ছেদ করলে 'Z' আকৃতির কোণগুলো একান্তর কোণ (সমান) এবং 'F' আকৃতির কোণগুলো অনুরূপ কোণ (সমান)।",
     "rules": [
@@ -2057,7 +2057,7 @@
     "topic_name": "চতুর্ভুজ ও বৃত্ত",
     "category": "Geometry",
     "title": "বৃত্তের পরিধি, ক্ষেত্রফল ও বৃত্তাংশের চাপ-ক্ষেত্রফল",
-    "formula": "$$C = 2\\pi r = \\pi d, \\quad A = \\pi r^2, \\quad \\text{চাপের দৈর্ঘ্য } s = \\frac{\\theta}{360^\\circ} \\times 2\\pi r, \\quad \\text{বৃত্তকলা} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$$",
+    "formula": "$$\\begin{aligned} C &= 2\\pi r = \\pi d, \\quad A = \\pi r^2 \\\\[4pt] s &= \\frac{\\theta}{360^\\circ} \\times 2\\pi r, \\quad A_{\\text{কলা}} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "যেখানে $r$ হলো ব্যাসার্ধ এবং $d = 2r$ হলো ব্যাস। $\\theta$ হলো কেন্দ্রে চাপের উৎপন্ন কোণ।",
     "rules": [
@@ -2121,7 +2121,7 @@
     "topic_name": "ঘন জ্যামিতি ও ত্রিমাত্রিক বস্তু",
     "category": "Geometry",
     "title": "বেলন (সিলিন্ডার) ও গোলকের আয়তন ও পৃষ্ঠতলের সূত্র",
-    "formula": "$$\\text{সিলিন্ডার আয়তন } = \\pi r^2 h, \\; \\text{বক্রতল } = 2\\pi rh; \\quad \\text{গোলক আয়তন } = \\frac{4}{3}\\pi r^3, \\; \\text{পৃষ্ঠতল } = 4\\pi r^2$$",
+    "formula": "$$\\begin{aligned} \\text{সিলিন্ডার: } V &= \\pi r^2 h, \\quad A_{\\text{বক্র}} = 2\\pi rh \\\\[4pt] \\text{গোলক: } V &= \\frac{4}{3}\\pi r^3, \\quad A_{\\text{তল}} = 4\\pi r^2 \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "যেখানে $r$ হলো ভূমির ব্যাসার্ধ এবং $h$ হলো সিলিন্ডারের উচ্চতা। গোলকের পৃষ্ঠতলের ক্ষেত্রফল হলো তার বৃহত্তম বৃত্তের ক্ষেত্রফলের ঠিক ৪ গুণ।",
     "rules": [
@@ -2169,7 +2169,7 @@
     "topic_name": "ত্রিকোণমিতি",
     "category": "Geometry",
     "title": "ত্রিকোণমিতিক আদর্শ কোণের মান মুখস্থ শর্টকাট",
-    "formula": "$$\\sin 30^\\circ = \\frac{1}{2}, \\; \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\; \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}; \\quad \\tan 30^\\circ = \\frac{1}{\\sqrt{3}}, \\; \\tan 45^\\circ = 1, \\; \\tan 60^\\circ = \\sqrt{3}$$",
+    "formula": "$$\\begin{aligned} \\sin 30^\\circ = \\tfrac{1}{2}, \\quad \\sin 45^\\circ = \\tfrac{1}{\\sqrt{2}}, \\quad \\sin 60^\\circ = \\tfrac{\\sqrt{3}}{2} \\\\[4pt] \\tan 30^\\circ = \\tfrac{1}{\\sqrt{3}}, \\quad \\tan 45^\\circ = 1, \\quad \\tan 60^\\circ = \\sqrt{3} \\end{aligned}$$",
     "concept_type": "shortcut",
     "explanation": "হাতের পাঁচ আঙুল পদ্ধতির সাহায্যে ০°, ৩০°, ৪৫°, ৬০°, ৯০° এর মান ২ সেকেন্ডে বের করা যায়: $\\sin \\theta = \\frac{\\sqrt{\\text{ডানপাশের আঙুল}}}{2}$।",
     "rules": [
@@ -2185,7 +2185,7 @@
     "topic_name": "ত্রিকোণমিতি",
     "category": "Geometry",
     "title": "উন্নতি কোণ ও অবনতি কোণ ও ছায়ার উচ্চতা অনুপাত",
-    "formula": "$$\\tan\\theta = \\frac{\\text{উচ্চতা (লম্ব)}}{\\text{ছায়ার দৈর্ঘ্য (ভূমি)}} \\implies \\theta = 45^\\circ \\iff \\text{উচ্চতা} = \\text{ছায়া}$$",
+    "formula": "$$\\tan\\theta = \\frac{\\text{উচ্চতা (লম্ব)}}{\\text{ছায়ার দৈর্ঘ্য (ভূমি)}} \\implies (\\theta = 45^\\circ \\iff \\text{লম্ব} = \\text{ভূমি})$$",
     "concept_type": "formula",
     "explanation": "খুঁটির উচ্চতা এবং ভূমিতে তার ছায়ার দৈর্ঘ্য সমান হলে সূর্যের উন্নতি কোণ সর্বদা ৪৫°। আর উচ্চতা ছায়ার $\\sqrt{3}$ গুণ হলে কোণ ৬০°, ছায়া উচ্চতার $\\sqrt{3}$ গুণ হলে ৩০°।",
     "rules": [
@@ -2249,7 +2249,7 @@
     "topic_name": "পরিমিতি ও ক্ষেত্রফল",
     "category": "Geometry",
     "title": "ক্ষেত্রফল ও পরিধির এককের রূপান্তর চার্ট",
-    "formula": "$$1 \\text{ একর} = 4046.86 \\text{ বর্গমিটার} = 43560 \\text{ বর্গফুট} = 100 \\text{ শতক (ডেসিমেল)}, \\quad 1 \\text{ হেক্টর} = 2.47 \\text{ একর}$$",
+    "formula": "$$\\begin{aligned} 1 \\text{ একর} &= 4046.86 \\text{ বর্গমিটার} = 100 \\text{ শতক} \\\\[4pt] 1 \\text{ হেক্টর} &= 2.47 \\text{ একর} = 10000 \\text{ বর্গমিটার} \\end{aligned}$$",
     "concept_type": "formula",
     "explanation": "বিসিএস ও ব্যাংক প্রিলিমিনারিতে ভূমির পরিমাপ ও একক রূপান্তরের এই মানগুলো সরাসরি প্রশ্ন হিসেবে আসে। ১ কাঠা = ৭২০ বর্গফুট = ১.৬৫ শতক।",
     "rules": [
@@ -2297,7 +2297,7 @@
     "topic_name": "বিসিএস ও ব্যাংক মডেল টেস্ট",
     "category": "Exam Revision",
     "title": "বিসিএস প্রিলিমিনারি গণিত টাইম ম্যানেজমেন্ট গোল্ডেন রুল",
-    "formula": "$$\\text{প্রতি প্রশ্নে সর্বোচ্চ সময়} \\le 45 \\text{ সেকেন্ড}, \\quad \\text{১৫ নম্বরের জন্য বরাদ্দ} = 12 \\text{ থেকে } 14 \\text{ মিনিট}$$",
+    "formula": "$$\\begin{aligned} \\text{প্রতি প্রশ্নে সর্বোচ্চ সময়} &\\le 45 \\text{ সেকেন্ড} \\\\[4pt] \\text{১৫টি গণিতের জন্য বরাদ্দ} &= 12 \\text{ থেকে } 14 \\text{ মিনিট} \\end{aligned}$$",
     "concept_type": "concept",
     "explanation": "বিসিএস প্রিলিমিনারিতে ২০০ প্রশ্নের জন্য ১২০ মিনিট সময় থাকে। গণিতের ১৫টি প্রশ্ন ১২-১৪ মিনিটের মধ্যে সমাধান করতে পারলেই কেবল বিজ্ঞান ও মানসিক দক্ষতায় ভারসাম্য বজায় রাখা সম্ভব।",
     "rules": [

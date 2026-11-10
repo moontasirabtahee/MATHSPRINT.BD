@@ -472,9 +472,9 @@ export const LearningRoomScreen: React.FC<LearningRoomScreenProps> = ({
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 কখন এবং কেন এই পদ্ধতি প্রয়োগ করবেন
               </h3>
-              <p className="text-xs text-slate-700 dark:text-slate-300">
-                {topic.concept_summary.when_to_use}
-              </p>
+              <div className="text-xs text-slate-700 dark:text-slate-300">
+                <MathView content={topic.concept_summary.when_to_use} inline />
+              </div>
             </div>
 
             {/* Interactive Visualizer for Geometry / Functions / Sets */}
@@ -516,7 +516,9 @@ export const LearningRoomScreen: React.FC<LearningRoomScreenProps> = ({
                 <strong className="block mb-0.5">
                   সাধারণ ভুল ও অসতর্কতা:
                 </strong>
-                <p>{topic.concept_summary.common_traps}</p>
+                <div className="text-rose-900 dark:text-rose-200">
+                  <MathView content={topic.concept_summary.common_traps} inline />
+                </div>
               </div>
             </div>
 
