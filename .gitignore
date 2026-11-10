@@ -1,0 +1,34 @@
+# Dev tools
+dev_tools/
+
+# Dependencies
+node_modules/
+web/node_modules/
+dist/
+web/dist/
+
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Raw source inputs
+input/
+
+# Sensitive API credentials & Local configurations
+config/keys.json
+.env
+.DS_Store
+Thumbs.db
+
+# Large outputs & temporary files
+output/rendered_images/
+output/debug_variants/
+output/digitizer.db
+output/digitizer.db-wal
+output/digitizer.db-shm
+output/checkpoints/
+output/final_docx/
+output/chapters/
+Testing of V1 -temp/

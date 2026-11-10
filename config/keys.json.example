@@ -1,0 +1,23 @@
+{
+  "api_keys": [
+    {
+      "alias": "Key_Alpha",
+      "key": "AIzaSyYOUR_FIRST_KEY_HERE",
+      "rpm_limit": 15,
+      "tpm_limit": 1000000
+    },
+    {
+      "alias": "Key_Beta",
+      "key": "AIzaSyYOUR_SECOND_KEY_HERE",
+      "rpm_limit": 15,
+      "tpm_limit": 1000000
+    },
+    {
+      "alias": "Key_Gamma",
+      "key": "AIzaSyYOUR_THIRD_KEY_HERE",
+      "rpm_limit": 15,
+      "tpm_limit": 1000000
+    }
+  ]
+}
+

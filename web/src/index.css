@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-bengali text-slate-900 dark:text-slate-100;
+  }
+}
+
+/* CRITICAL: Hide KaTeX MathML element to prevent duplicate text rendering (e.g. xyxy, x=4x=4) */
+.katex-mathml {
+  display: none !important;
+}
+
+/* Custom styles for rendered math */
+.math-rendered {
+  word-break: break-word;
+}
+
+.math-rendered .katex {
+  font-size: 1.05em;
+  text-rendering: auto;
+}
+
+.math-rendered .katex-display {
+  margin: 0.75em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25em 0;
+}
+
+.math-rendered .katex-html {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/* Hide scrollbar for clean UI tabs */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

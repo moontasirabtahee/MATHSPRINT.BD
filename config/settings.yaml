@@ -1,0 +1,26 @@
+# Pipeline Configuration Settings
+
+pipeline:
+  render_dpi: 350
+  batch_size: 25
+  max_parallel_workers: 3
+  default_model: "gemini-3.1-flash-lite"
+  judge_model: "gemini-3.1-flash-lite"
+
+preprocessing:
+  auto_deskew: true
+  contrast_enhancement: true
+  unsharp_mask: true
+  denoise: true
+
+consensus:
+  similarity_threshold: 0.98
+  strict_math_matching: true
+  ai_judge_auto_trigger: true
+
+reconstruction:
+  primary_bengali_font: "Kalpurush"
+  fallback_bengali_font: "SolaimanLipi"
+  math_font: "Cambria Math"
+  output_format: "docx"
+

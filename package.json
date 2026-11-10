@@ -1,0 +1,11 @@
+{
+  "name": "mathsprint-bd-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MathSprint BD - Offline Competitive Mathematics Learning System for Bangladesh Exams",
+  "scripts": {
+    "build": "npm --prefix web run build",
+    "dev": "npm --prefix web run dev",
+    "preview": "npm --prefix web run preview"
+  }
+}
