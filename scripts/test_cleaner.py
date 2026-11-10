@@ -15,3 +15,4 @@ with open("scripts/test_gemini_topic.py", "r", encoding="utf-8") as f:
     text = f.read()
 
 # Let's inspect how to parse resp.text
+

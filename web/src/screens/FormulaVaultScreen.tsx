@@ -281,9 +281,9 @@ export const FormulaVaultScreen: React.FC<FormulaVaultScreenProps> = ({
                   {isRevealed ? (
                     <div className="space-y-3 pt-1 text-xs">
                       {f.explanation && (
-                        <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                          {f.explanation}
-                        </p>
+                        <div className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                          <MathView content={f.explanation} />
+                        </div>
                       )}
 
                       {f.rules && f.rules.length > 0 && (
@@ -291,9 +291,11 @@ export const FormulaVaultScreen: React.FC<FormulaVaultScreenProps> = ({
                           <span className="font-bold text-slate-800 dark:text-slate-200 block mb-1">
                             প্রয়োগের নিয়মাবলি:
                           </span>
-                          <ul className="list-disc list-inside space-y-0.5 text-slate-600 dark:text-slate-400">
+                          <ul className="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-400">
                             {f.rules.map((r, ri) => (
-                              <li key={ri}>{r}</li>
+                              <li key={ri}>
+                                <MathView content={r} inline />
+                              </li>
                             ))}
                           </ul>
                         </div>

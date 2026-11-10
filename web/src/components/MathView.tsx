@@ -10,8 +10,8 @@ interface MathViewProps {
 // Battle-tested sanitizer that guarantees 99.99%+ clean KaTeX compilation
 function sanitizeMath(mathStr: string): string {
   let m = mathStr.trim();
-  // Strip outer or rogue $
-  m = m.replace(/\$/g, '');
+  // Strip outer rogue $ if any
+  m = m.replace(/^\$+|\$+$/g, '');
   // Fix OCR truncated fraction \fr -> \frac
   m = m.replace(/\\fr\b/g, '\\frac');
   m = m.replace(/\\se\b/g, '\\sec');
@@ -46,38 +46,56 @@ export const MathView: React.FC<MathViewProps> = ({ content, className = '', inl
     text = text.replace(/^(?:[০-৯\d]+[\.\)]\s*)/, '');
     text = text.replace(/\s+(?:Ans|Answer|উত্তর)\s*[:\.\-]\s*.*$/i, '');
 
-    // 3. Process display math $$...$$ first
+    // 3. Extract all math expressions and replace them with unique placeholders
+    // This CRITICALLY protects KaTeX's internal SVG <path d="..."> strings from having \n replaced with <br/>!
+    const mathTokens: string[] = [];
+
+    // First replace display math $$...$$
     text = text.replace(/\$\$(.+?)\$\$/gs, (_, math) => {
+      const token = `%%KMATH_${mathTokens.length}%%`;
       const sanitized = sanitizeMath(math);
       try {
-        return katex.renderToString(sanitized, {
+        const rendered = katex.renderToString(sanitized, {
           displayMode: true,
           throwOnError: false,
-          output: 'html', // Use 'html' only to prevent MathML + HTML duplicate rendering
-          strict: false,  // Permit Bengali numerals and unicode in math mode
+          output: 'html',
+          strict: false,
         });
+        mathTokens.push(rendered);
       } catch (err) {
-        return `<span class="text-rose-500 font-mono text-xs">${sanitized}</span>`;
+        mathTokens.push(`<span class="text-rose-500 font-mono text-xs">${sanitized}</span>`);
       }
+      return token;
     });
 
-    // 4. Process inline math $...$
+    // Next replace inline math $...$
     text = text.replace(/\$([^\$]+?)\$/g, (_, math) => {
+      const token = `%%KMATH_${mathTokens.length}%%`;
       const sanitized = sanitizeMath(math);
       try {
-        return katex.renderToString(sanitized, {
+        const rendered = katex.renderToString(sanitized, {
           displayMode: false,
           throwOnError: false,
-          output: 'html', // Use 'html' only to prevent MathML + HTML duplicate rendering
-          strict: false,  // Permit Bengali numerals and unicode in math mode
+          output: 'html',
+          strict: false,
         });
+        mathTokens.push(rendered);
       } catch (err) {
-        return `<span class="text-rose-500 font-mono text-xs">${sanitized}</span>`;
+        mathTokens.push(`<span class="text-rose-500 font-mono text-xs">${sanitized}</span>`);
       }
+      return token;
     });
 
-    // 5. Replace actual newlines with <br/> safely
-    return text.replace(/\n/g, '<br/>');
+    // 4. Safely replace newlines in the PROSE ONLY (outside KaTeX SVGs)
+    text = text.replace(/\n/g, '<br/>');
+
+    // 5. Restore the rendered KaTeX tokens back into the HTML
+    text = text.replace(/%%KMATH_(\d+)%%/g, (_, indexStr) => {
+      const idx = parseInt(indexStr, 10);
+      return mathTokens[idx] ?? '';
+    });
+
+    return text;
   }, [content]);
 
   if (inline) {
