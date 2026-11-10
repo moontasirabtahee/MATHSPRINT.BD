@@ -273,7 +273,7 @@ export const FormulaVaultScreen: React.FC<FormulaVaultScreenProps> = ({
                   </h3>
 
                   {/* Formula LaTeX Display Box */}
-                  <div className="my-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/60 font-mono text-xs sm:text-sm text-emerald-900 dark:text-emerald-300 leading-relaxed overflow-x-auto">
+                  <div className="my-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/60 text-xs sm:text-sm text-emerald-900 dark:text-emerald-300 leading-relaxed overflow-hidden">
                     <MathView content={f.formula} />
                   </div>
 

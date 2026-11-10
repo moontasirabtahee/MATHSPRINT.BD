@@ -207,7 +207,7 @@
       "when_to_use": "যখন প্রশ্নে বর্গ ও বর্গমূল সম্পর্কিত গাণিতিক সম্পর্ক বা অনুপাত দেয়া থাকে।",
       "common_traps": "চিহ্ন পরিবর্তন (±), এককের রূপান্তর (যেমন কিমি/ঘণ্টা থেকে মিটার/সেকেন্ড), এবং শেষের ধাপে শর্ত যাচাই না করা।"
     },
-    "diagnostic_question_id": "q_topic_05_001",
+    "diagnostic_question_id": "q_topic_05_009",
     "worked_example_id": "q_topic_05_005",
     "formula_ids": [
       "formula_106",
@@ -1417,7 +1417,7 @@
       "when_to_use": "যখন প্রশ্নে অসমতা (Inequality) সম্পর্কিত গাণিতিক সম্পর্ক বা অনুপাত দেয়া থাকে।",
       "common_traps": "চিহ্ন পরিবর্তন (±), এককের রূপান্তর (যেমন কিমি/ঘণ্টা থেকে মিটার/সেকেন্ড), এবং শেষের ধাপে শর্ত যাচাই না করা।"
     },
-    "diagnostic_question_id": "q_topic_29_005",
+    "diagnostic_question_id": "q_topic_29_027",
     "worked_example_id": "q_topic_29_007",
     "formula_ids": [
       "formula_785",

@@ -500,7 +500,7 @@ export const LearningRoomScreen: React.FC<LearningRoomScreenProps> = ({
                       <span className="font-bold text-slate-700 dark:text-slate-300 block mb-1">
                         <MathView content={f.title} inline />
                       </span>
-                      <div className="text-emerald-700 dark:text-emerald-300 font-mono">
+                      <div className="text-emerald-700 dark:text-emerald-300">
                         <MathView content={f.formula} />
                       </div>
                     </div>

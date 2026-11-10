@@ -3,7 +3,7 @@ import curriculumData from '../data/curriculum.json';
 import coreQuestionsData from '../data/questions_core.json';
 import formulasData from '../data/formulas.json';
 
-const CURRENT_DATA_VERSION = 6;
+const CURRENT_DATA_VERSION = 7;
 
 export async function initializeDatabase() {
   try {

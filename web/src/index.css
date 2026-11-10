@@ -8,9 +8,34 @@
   }
 }
 
-/* CRITICAL: Hide KaTeX MathML element to prevent duplicate text rendering (e.g. xyxy, x=4x=4) */
+/* CRITICAL: Hide KaTeX MathML element to prevent duplicate text rendering */
 .katex-mathml {
   display: none !important;
+}
+
+/* Ensure all Bengali characters inside KaTeX use high quality Bengali fonts with full OpenType ligatures */
+.katex,
+.katex .text,
+.katex .brahmic_fallback,
+.katex .mord.text,
+.katex span.mord {
+  font-family: 'Hind Siliguri', SolaimanLipi, Kalpurush, system-ui, -apple-system, sans-serif;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+/* Retain specialized KaTeX math fonts strictly for math symbols, numbers, and operators */
+.katex .mord.mathnormal,
+.katex .mbin,
+.katex .mrel,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct,
+.katex .minner,
+.katex .mfrac .frac-line,
+.katex .sqrt,
+.katex svg {
+  font-family: KaTeX_Math, KaTeX_Main, KaTeX_Size1, KaTeX_Size2, KaTeX_Size3, KaTeX_Size4, KaTeX_AMS, sans-serif !important;
 }
 
 /* Custom styles for rendered math */
@@ -24,16 +49,43 @@
 }
 
 .math-rendered .katex-display {
-  margin: 0.75em 0;
+  margin: 0.6em 0;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0.25em 0;
+  padding: 0.2em 0;
+  scrollbar-width: thin;
 }
 
 .math-rendered .katex-html {
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
+}
+
+/* Sleek subtle scrollbar for wide equations (prevents thick grey Windows scrollbars) */
+.math-rendered ::-webkit-scrollbar,
+.katex-display::-webkit-scrollbar,
+.katex-html::-webkit-scrollbar {
+  height: 4px;
+}
+
+.math-rendered ::-webkit-scrollbar-track,
+.katex-display::-webkit-scrollbar-track,
+.katex-html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.math-rendered ::-webkit-scrollbar-thumb,
+.katex-display::-webkit-scrollbar-thumb,
+.katex-html::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.35);
+  border-radius: 4px;
+}
+
+.math-rendered ::-webkit-scrollbar-thumb:hover,
+.katex-display::-webkit-scrollbar-thumb:hover,
+.katex-html::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.65);
 }
 
 /* Hide scrollbar for clean UI tabs */
